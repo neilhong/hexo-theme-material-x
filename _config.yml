@@ -4,11 +4,11 @@ info:
   docs: https://xaoxuu.com/wiki/material-x/
   cdn: # 把对应的那一行注释掉就使用本地的文件
     css:
-      style: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.4.19/css/style.css
+      style: https://cdn.jsdelivr.net/gh/neilhong/assets@master/css/style.css
     js:
-      app: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.4.19/js/app.js
-      search: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.4.19/js/search.js
-      volantis: https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1/js/volantis.min.js
+      app: https://cdn.jsdelivr.net/gh/neilhong/assets@master/js/app.js
+      search: https://cdn.jsdelivr.net/gh/neilhong/assets@master/js/search.js
+      volantis: https://cdn.jsdelivr.net/gh/neilhong/assets@master/js/volantis.js
 
 
 
@@ -28,7 +28,7 @@ busuanzi: true
 ############################### 默认值 ###############################
 # 音乐控件的默认配置，如果sidebar或者page里没有提供，就取这里的参数
 music:
-  enable: true      # 是否启用
+  enable: false     # 是否启用
   color: '#1BCDFC'  # 主题色
   mode: circulation # random （随机） single （单曲） circulation （列表循环） order （列表）
   server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
@@ -88,15 +88,15 @@ menu_desktop:
     url: /
   - name: 分类
     icon: fas fa-folder-open
-    url: blog/categories/
+    url: categories/
     rel: nofollow
   - name: 标签
     icon: fas fa-hashtag
-    url: blog/tags/
+    url: tags/
     rel: nofollow
   - name: 归档
     icon: fas fa-archive
-    url: blog/archives/
+    url: archives/
     rel: nofollow
 
 # 手机端导航菜单（从右上角的按钮点击展开）
@@ -106,7 +106,7 @@ menu_mobile:
     url: /
   - name: 文章归档
     icon: fas fa-archive
-    url: blog/archives/
+    url: archives/
     rel: nofollow
   - name: 开源项目
     icon: fas fa-code-branch
@@ -136,9 +136,9 @@ body: [article, comments]
 
 # 侧边栏小部件，默认按下面给定的顺序全部显示，文章中还可以自定义显示一部分以及顺序
 sidebar:
-  - widget: author
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
-    social: true
+  #- widget: author
+  #  avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
+  #  social: true
   - widget: toc
   - widget: grid
     icon: fas fa-map-signs
@@ -149,19 +149,19 @@ sidebar:
         url: /
       - name: 文章归档
         icon: fas fa-archive
-        url: blog/archives/
+        url: archives/
         rel: nofollow
-      - name: 开源项目
-        icon: fas fa-code-branch
-        url: projects/
-      - name: 我的友链
-        icon: fas fa-link
-        url: friends/
-        rel: nofollow
-      - name: 主题文档
-        icon: fas fa-book
-        url: https://xaoxuu.com/wiki/material-x/
-        rel: nofollow
+        #- name: 开源项目
+        #- icon: fas fa-code-branch
+        #- url: projects/
+        #- name: 我的友链
+        #- icon: fas fa-link
+        #- url: friends/
+        #- rel: nofollow
+        #- name: 主题文档
+        #- icon: fas fa-book
+        #- url: https://xaoxuu.com/wiki/material-x/
+        #- rel: nofollow
       - name: 关于小站
         icon: fas fa-info-circle
         url: about/
@@ -169,13 +169,13 @@ sidebar:
   - widget: category
     more:
       icon: fas fa-expand-arrows-alt
-      url: blog/categories/
+      url: categories/
       rel: nofollow
   - widget: tagcloud
     icon: fas fa-fire
     more:
       icon: fas fa-expand-arrows-alt
-      url: blog/tags/
+      url: tags/
       rel: nofollow
   # - widget: related_posts # 需要安装插件  npm i -S hexo-related-popular-posts
   - widget: music
@@ -193,14 +193,14 @@ sidebar:
 
 # 社交信息
 social:
-  - icon: fas fa-rss
-    url: atom.xml
+  #- icon: fas fa-rss
+  #  url: atom.xml
   - icon: fas fa-envelope
     url: neilhong1206@163.com
   - icon: fab fa-github
     url: https://github.com/neilhong
-  - icon: fas fa-headphones-alt
-    url: https://music.163.com/#/user/home?id=63035382
+  #- icon: fas fa-headphones-alt
+  #- url: https://music.163.com/#/user/home?id=63035382
 
 
 # 分享按钮
@@ -244,8 +244,8 @@ share:
 ############################### 杂项，请勿删除 ###############################
 #valine配置
 valine:
-  enable: true # 如果你想用Valine评论系统，请设置enable为true
-  volantis: true # 是否启用volantis版本（禁止匿名，增加若干贴吧、QQ表情）
+  enable: false # 如果你想用Valine评论系统，请设置enable为true
+  volantis: false # 是否启用volantis版本（禁止匿名，增加若干贴吧、QQ表情）
   # 还需要在根目录配置文件中添加下面这三行内容
   # leancloud:
   #   app_id: 你的appId
